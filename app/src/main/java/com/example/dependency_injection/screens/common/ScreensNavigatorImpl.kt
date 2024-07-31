@@ -5,7 +5,7 @@ import com.example.dependency_injection.screens.questiondetails.QuestionDetailsA
 import com.example.dependency_injection.screens.viewmodel.ViewModelActivity
 import javax.inject.Inject
 
-class ScreensNavigatorImpl  @Inject constructor(private val activity: AppCompatActivity): ScreensNavigator {
+abstract class ScreensNavigatorImpl  @Inject constructor(private val activity: AppCompatActivity): ScreensNavigator {
     override fun navigatorBack() {
         activity.onBackPressed()
     }

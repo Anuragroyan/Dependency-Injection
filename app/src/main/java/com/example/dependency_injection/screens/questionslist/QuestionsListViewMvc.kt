@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.dependency_injection.R
 import com.example.dependency_injection.questions.Question
+import com.example.dependency_injection.screens.common.viewsmvc.BaseViewMvc
 
 class QuestionsListViewMvc(
     private val layoutInflater: LayoutInflater,
@@ -15,7 +16,7 @@ class QuestionsListViewMvc(
 ) {
     interface Listener {
         fun onRefreshClicked()
-        fun onQuestionClicked(clikedQuestion: Question)
+        fun onQuestionClicked(clickedQuestion: Question)
         fun onViewModelClicked()
     }
 }
