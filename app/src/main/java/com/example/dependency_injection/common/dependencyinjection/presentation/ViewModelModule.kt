@@ -1,6 +1,8 @@
 package com.example.dependency_injection.common.dependencyinjection.presentation
 
 import androidx.lifecycle.ViewModel
+import com.example.dependency_injection.screens.viewmodel.MyViewModel
+import com.example.dependency_injection.screens.viewmodel.MyViewModel2
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

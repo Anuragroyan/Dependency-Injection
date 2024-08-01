@@ -49,4 +49,9 @@ class MyToolbar : Toolbar{
         this.navigateUpListener = navigateUpListener
         navigateUp.visibility = View.VISIBLE
     }
+
+    fun setViewModelListener(viewModelListener: () -> Unit){
+        this.viewModelListener = viewModelListener
+        viewmodel.visibility = View.VISIBLE
+    }
 }

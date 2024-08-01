@@ -9,7 +9,7 @@ import javax.inject.Inject
 class FetchQuestionsUseCase @Inject constructor(private val stackoverflowApi: StackoverflowApi){
     sealed class Result {
         data class Success(val questions: List<Question>): Result()
-        object Failure: Result()
+        data object Failure: Result()
     }
 
     suspend fun fetchLatestQuestions(): Result {

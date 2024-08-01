@@ -9,15 +9,15 @@ import javax.inject.Inject
 class FetchQuestionDetailsUseCase @Inject constructor(private val stackoverflowApi: StackoverflowApi) {
 
     sealed class Result {
-        data class Success(val question: QuestionWithBody): Result()
+        data class Success(val question: List<Question>): Result()
         object Failure: Result()
     }
-    suspend fun fetchQuestion(questionId: String): Result {
+    suspend fun fetchLatestQuestions(): Result {
         return withContext(Dispatchers.IO){
             try {
-                val response = stackoverflowApi.questionsDetails(questionId)
+                val response = stackoverflowApi.lastActiveQuestions(20)
                 if (response.isSuccessful && response.body() != null){
-                    return@withContext Result.Success(response.body()!!.question)
+                    return@withContext Result.Success(response.body()!!.questions)
                 } else {
                     return@withContext  Result.Failure
                 }

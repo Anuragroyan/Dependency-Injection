@@ -10,7 +10,7 @@ import dagger.Subcomponent
 @Subcomponent(modules=[PresentationModule::class, ViewModelModule::class])
 interface PresentationComponent {
     fun inject(fragment: QuestionsListFragment)
-    fun inject(activity: QuestionDetailsActivity<Any?>)
+    fun inject(activity: QuestionDetailsActivity<Throwable>)
     fun inject(questionsListActivity: QuestionsListActivity)
     fun inject(viewModelActivity: ViewModelActivity)
 }

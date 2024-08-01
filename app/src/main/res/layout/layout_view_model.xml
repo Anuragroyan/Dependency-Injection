@@ -18,7 +18,7 @@
         android:gravity="center"
         android:textSize="20sp"
         android:textColor="@color/black"
-        android:text="Empty screen for ViewModel injection tutorial"/>
+        android:text="@string/empty_screen_for_viewmodel_injection_tutorial"/>
 
 
 </RelativeLayout>

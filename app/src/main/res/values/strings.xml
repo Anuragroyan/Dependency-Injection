@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Dependency_Injection</string>
+    <string name="server_error_dialog_title">Server Error</string>
+    <string name="server_error_dialog_message">Communication with the server failed</string>
+    <string name="server_error_dialog_button_caption">OK</string>
+    <string name="image_description">image description</string>
+    <string name="empty_screen_for_viewmodel_injection_tutorial">Empty screen for ViewModel injection tutorial</string>
+    <string name="viewmodel">ViewModel</string>
 </resources>

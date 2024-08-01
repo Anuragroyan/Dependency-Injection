@@ -3,15 +3,18 @@ package com.example.dependency_injection.screens.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
+import com.example.dependency_injection.questions.FetchQuestionDetailsUseCase
 import com.example.dependency_injection.questions.FetchQuestionsUseCase
 import com.example.dependency_injection.questions.Question
+import com.example.dependency_injection.screens.common.viewmodels.SavedStateViewModel
+import kotlinx.coroutines.CoroutineScope
 import javax.inject.Inject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-class MyViewModel @Inject constructor(
+abstract class MyViewModel @Inject constructor(
     private val fetchQuestionsUseCase: FetchQuestionsUseCase,
-    private val fetchQuestionDetailsUseCase: FetchQuestionsUseCase
+    private val fetchQuestionDetailsUseCase: FetchQuestionDetailsUseCase
 ): SavedStateViewModel() {
 
     private lateinit var _questions: MutableLiveData<List<Question>>
@@ -30,4 +33,8 @@ class MyViewModel @Inject constructor(
             }
         }
     }
+}
+
+private fun Any.launch(coroutineScopeUnitSuspendFunction1: suspend CoroutineScope.() -> Unit) {
+
 }
